@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Profile - page</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="inner-container">
+            <div class="profile-detail">
+                <div>
+                    <div class="inner-profile-container">
+                        <img src="./profile.jpg" alt="profile" class="profile-img" data-testid="profilePicture">
+                    </div>
+                    <h1 data-testid="fullName">Roland Odenore</h1>
+                    <div class="detail-job">
+                        <svg 
+                        class="icon" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" />
+                        <path d="M22 6l-10 7L2 6" />
+                    </svg>
+                    
+
+                        <span class="job" data-testid="emailAddress">Breezyroland@gmail.com</span>
+                    </div>
+                    <div class="detail-job">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"></path></svg>
+                        <span class="job" data-testid="jobTitle">SOFTWARE DEVELOPER</span>
+                    </div>
+                    <div class="detail-job">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm7.75-8a8.01 8.01 0 0 0 0-4h-3.82a28.81 28.81 0 0 1 0 4h3.82zm-.82 2h-3.22a14.44 14.44 0 0 1-.95 3.51A8.03 8.03 0 0 0 16.93 14zm-8.85-2h3.84a24.61 24.61 0 0 0 0-4H8.08a24.61 24.61 0 0 0 0 4zm.25 2c.41 2.4 1.13 4 1.67 4s1.26-1.6 1.67-4H8.33zm-6.08-2h3.82a28.81 28.81 0 0 1 0-4H2.25a8.01 8.01 0 0 0 0 4zm.82 2a8.03 8.03 0 0 0 4.17 3.51c-.42-.96-.74-2.16-.95-3.51H3.07zm13.86-8a8.03 8.03 0 0 0-4.17-3.51c.42.96.74 2.16.95 3.51h3.22zm-8.6 0h3.34c-.41-2.4-1.13-4-1.67-4S8.74 3.6 8.33 6zM3.07 6h3.22c.2-1.35.53-2.55.95-3.51A8.03 8.03 0 0 0 3.07 6z"></path></svg>
+                        <span class="address" data-testid="currentLocation">No.1 Isaac Str. Ugbomoro, Effurun, Delta State</span>
+                    </div>
+                    <div class="detail-job">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" stroke-width="2" fill="currentColor" class="bi bi-clock" viewBox="0 0 20 20">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/>
+                        </svg>
+                        <span class="address currentUTCTime" data-testid="currentLocation"></span>
+                    </div>
+                    <p class="bio" data-testid="shortBio">I am a passionate developer who loves learning new technologies and building software solutions. With a background in Electrical and Electronics Engineering from FUPRE, I enjoy tackling complex problems and creating impactful applications. Beyond coding, I engage in sports, particularly football, as well as music and gaming.</p>
+                    <div class="socials" data-testid="socialLinks">
+                        <a class="link" href="https://www.facebook.com/share/15iRDYWRmd/" target="_blank" data-tippy-content="@facebook_handle"><svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title class="social-title">Facebook</title><path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path></svg></a>
+                        <a class="link" href="https://x.com/RolandOdenore?t=MTAvnuhOCqZrLsfIK7tQjg&s=09" target="_blank" data-tippy-content="@twitter_handle">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg" 
+                            class="social-icon" 
+                            role="img" 
+                            viewBox="0 0 24 24" 
+                            fill="currentColor"
+                        >
+                            <title>Twitter X</title>
+                            <path d="M17.5 2H22L13.4 11.8 23.5 22h-6.2l-6.2-6.9-7 6.9H1l9.2-10.2L1.5 2h6.3l5.6 6.7L17.5 2ZM14 20h2l-8.3-9.5h-2.1L14 20Z"/>
+                        </svg>
+                        </a>
+                        <a class="link" href="https://github.com/Roland-Odez/" target="_blank" data-tippy-content="@github_handle"><svg class="social-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></a>
+                        <a class="link" href="https://www.linkedin.com/in/roland-odenore-755a0128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" data-tippy-content="@linkedIn_handle"><svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            width="24" 
+                            height="24" 
+                            fill="currentColor" 
+                            class="bi bi-linkedin" 
+                            viewBox="0 0 16 16"
+                        >
+                        <title>LinkedIn</title>
+                          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                        </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-container">
+                <img src="./profile.jpg" alt="profile" class="profile-img" data-testid="profilePicture">
+            </div>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
