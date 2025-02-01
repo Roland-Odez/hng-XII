@@ -29,8 +29,8 @@ GET <your-deployment-url>
 ## 🏗️ Installation & Setup
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
+git clone https://github.com/Roland-Odez/hng-XII.git
+cd task-0/backend
 ```
 
 ### 2️⃣ Install Dependencies
@@ -60,7 +60,7 @@ npm start
 {
   "email": "your-email@example.com",
   "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/yourusername/your-repo"
+  "github_url": "https://github.com/Roland-Odez/hng-XII/tree/main/task-0/backend"
 }
 ```
 
