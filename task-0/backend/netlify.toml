@@ -1,0 +1,8 @@
+[build]
+  publish = ""
+  functions = "backend/dist"
+  base = "task-0/backend"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"

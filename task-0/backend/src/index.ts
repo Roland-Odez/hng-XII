@@ -1,5 +1,6 @@
 import express, { Request, RequestHandler, Response } from "express";
 import { setupSwagger } from "./swagger";
+import ServerlessHttp from "serverless-http";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -70,3 +71,5 @@ app.use("*", (req: Request, res: Response) => {
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });
+
+module.exports.handler = ServerlessHttp(app);
