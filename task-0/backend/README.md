@@ -14,9 +14,9 @@ GET <your-deployment-url>
 ## 📡 JSON Response Format
 ```json
 {
-  "email": "your-email@example.com",
+  "email": "breezyroland@example.com",
   "current_datetime": "2025-01-30T09:30:00Z",
-  "github_url": "https://github.com/yourusername/your-repo"
+  "github_url": "https://github.com/Roland-Odez/hng-XII/tree/main/task-0/backend"
 }
 ```
 
@@ -58,7 +58,7 @@ npm start
 #### 🔹 Response (200 OK)
 ```json
 {
-  "email": "your-email@example.com",
+  "email": "breezyroland@example.com",
   "current_datetime": "2025-01-30T09:30:00Z",
   "github_url": "https://github.com/Roland-Odez/hng-XII/tree/main/task-0/backend"
 }
