@@ -3,24 +3,24 @@ import { setupSwagger } from "./swagger";
 import ServerlessHttp from "serverless-http";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// CORS middleware
 const corsMiddleware: RequestHandler = (req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  
+
     // Handle Preflight Request
     if (req.method === "OPTIONS") {
-      res.sendStatus(204);
-      return;
+        res.sendStatus(204);
+        return;
     }
-  
+
     next();
 }
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(corsMiddleware);
 
 setupSwagger(app);
@@ -52,9 +52,9 @@ setupSwagger(app);
  */
 
 app.get("/", (req: Request, res: Response) => {
-    const email = 'breezyroland@gmail.com'
+    const email = 'breezyroland@gmail.com';
     const current_datetime = new Date().toISOString();
-    const github_url = ''
+    const github_url = ''; // You can update with your actual GitHub URL
 
     res.status(200).json({
         email,
@@ -63,13 +63,10 @@ app.get("/", (req: Request, res: Response) => {
     });
 });
 
+// 404 handler
 app.use("*", (req: Request, res: Response) => {
     res.status(404).json({ error: "Not found!" });
 });
 
-
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
-
+// Export the handler for Netlify
 module.exports.handler = ServerlessHttp(app);
