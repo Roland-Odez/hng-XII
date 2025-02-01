@@ -51,7 +51,7 @@ setupSwagger(app);
  *                   example: "https://github.com/yourusername"
  */
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/api", (req: Request, res: Response) => {
     const email = 'breezyroland@gmail.com';
     const current_datetime = new Date().toISOString();
     const github_url = ''; // You can update with your actual GitHub URL
@@ -69,4 +69,4 @@ app.use("*", (req: Request, res: Response) => {
 });
 
 // Export the handler for Netlify
-module.exports.handler = ServerlessHttp(app);
+export const handler = ServerlessHttp(app);
