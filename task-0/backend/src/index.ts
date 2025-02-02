@@ -1,6 +1,6 @@
 import express, { Request, RequestHandler, Response } from "express";
 import { setupSwagger } from "./swagger";
-import ServerlessHttp from "serverless-http";
+import { VercelRequest, VercelResponse } from "@vercel/node";
 
 const app = express();
 
@@ -68,5 +68,7 @@ app.use("*", (req: Request, res: Response) => {
     res.status(404).json({ error: "Not found!" });
 });
 
-// Export the handler for Netlify
-export const handler = ServerlessHttp(app);
+// 🚀 Export the function for Vercel
+export default (req: VercelRequest, res: VercelResponse) => {
+    return app(req, res);
+};
