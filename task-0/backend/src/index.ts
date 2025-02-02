@@ -1,6 +1,6 @@
 import express, { Request, RequestHandler, Response } from "express";
 import { setupSwagger } from "./swagger";
-import { VercelRequest, VercelResponse } from "@vercel/node";
+// import { VercelRequest, VercelResponse } from "@vercel/node";
 
 const app = express();
 
@@ -51,7 +51,7 @@ setupSwagger(app);
  *                   example: "https://github.com/yourusername"
  */
 
-app.get("/api", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
     const email = 'breezyroland@gmail.com';
     const current_datetime = new Date().toISOString();
     const github_url = ''; // You can update with your actual GitHub URL
@@ -69,6 +69,4 @@ app.use("*", (req: Request, res: Response) => {
 });
 
 // 🚀 Export the function for Vercel
-export default (req: VercelRequest, res: VercelResponse) => {
-    return app(req, res);
-};
+module.exports = app;
