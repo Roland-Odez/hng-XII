@@ -68,5 +68,7 @@ app.use("*", (req: Request, res: Response) => {
     res.status(404).json({ error: "Not found!" });
 });
 
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
 // 🚀 Export the function for Vercel
 module.exports = app;
