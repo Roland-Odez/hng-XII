@@ -54,7 +54,7 @@ setupSwagger(app);
 app.get("/", (req: Request, res: Response) => {
     const email = 'breezyroland@gmail.com';
     const current_datetime = new Date().toISOString();
-    const github_url = ''; // You can update with your actual GitHub URL
+    const github_url = 'https://github.com/Roland-Odez/hng-XII/tree/main/task-0/backend'; // You can update with your actual GitHub URL
 
     res.status(200).json({
         email,

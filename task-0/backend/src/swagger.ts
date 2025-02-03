@@ -12,8 +12,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3000",
-        description: "Local Server",
+        url: "https://backend-task-0.vercel.app/",
+        description: "Online Server",
       },
     ],
   },
