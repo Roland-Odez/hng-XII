@@ -23,7 +23,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(corsMiddleware);
 
-setupSwagger(app);
 
 /**
  * @swagger
@@ -49,13 +48,13 @@ setupSwagger(app);
  *                 github_url:
  *                   type: string
  *                   example: "https://github.com/yourusername"
- */
+*/
 
 app.get("/", (req: Request, res: Response) => {
     const email = 'breezyroland@gmail.com';
     const current_datetime = new Date().toISOString();
     const github_url = 'https://github.com/Roland-Odez/hng-XII/tree/main/task-0/backend'; // You can update with your actual GitHub URL
-
+    
     res.status(200).json({
         email,
         current_datetime,
@@ -63,10 +62,11 @@ app.get("/", (req: Request, res: Response) => {
     });
 });
 
+setupSwagger(app);
 // 404 handler
-// app.use("*", (req: Request, res: Response) => {
-//     res.status(404).json({ error: "Not found!" });
-// });
+app.use("*", (req: Request, res: Response) => {
+    res.status(404).json({ error: "Not found!" });
+});
 
 app.listen(3000, () => console.log("Server ready on port 3000."));
 
