@@ -1,0 +1,7 @@
+{
+    "watch": [".",  "api/**/*.ts"],
+    "ext": "ts",
+    "ignore": ["api/**/*.spec.ts", "api/**/*.test.ts", "api/**/*.d.ts", "node_modules"],
+    "exec": "npm run build && node dist/index.js"
+  }
+  
