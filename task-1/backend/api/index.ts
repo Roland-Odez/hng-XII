@@ -21,16 +21,18 @@ app.use(corsMiddleware);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/classify-number", async (req: Request, res: Response) => {
+app.get("/api/classify-number", async (req: Request, res: Response): Promise<void> => {
     const { number } = req.query;
     const num = Number(number);
 
     if (!number) {
         res.status(400).json({ number: "Number is required!", error: true });
+        return;
     }
 
     if (isNaN(num)) {
         res.status(400).json({ number: "alphabet", error: true });
+        return;
     }
 
     try {
@@ -51,9 +53,11 @@ app.get("/api/classify-number", async (req: Request, res: Response) => {
             digit_sum: sumOfDigits,
             fun_fact: funFact
         });
+        return;
 
     } catch (error) {
         res.status(500).json({ error: "Internal Server Error" });
+        return;
     }
 });
 
