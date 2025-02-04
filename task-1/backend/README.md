@@ -1,7 +1,3 @@
-Here’s your updated **README.md** in the same structured style as your first task:  
-
----
-
 # 🧮 Number Classification API  
 
 ## 📌 Project Description  
@@ -15,7 +11,7 @@ The **Number Classification API** is a RESTful service that analyzes a given num
 
 ## 🚀 Live API Endpoint  
 ```plaintext
-GET <your-deployment-url>/api/classify-number?number=<your_number>
+GET https://backend-task-1-sepia.vercel.app/api/classify-number?number=<your_number>
 ```  
 
 ## 📡 JSON Response Format  
@@ -47,8 +43,8 @@ GET <your-deployment-url>/api/classify-number?number=<your_number>
 ## 🏗️ Installation & Setup  
 ### 1️⃣ Clone the Repository  
 ```sh
-git clone https://github.com/yourusername/number-classification-api.git  
-cd number-classification-api
+git clone https://github.com/Roland-Odez/hng-XII.git
+cd task-1/backend
 ```  
 
 ### 2️⃣ Install Dependencies  
