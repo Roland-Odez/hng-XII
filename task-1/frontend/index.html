@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Black+And+White+Picture&family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>ColorQuest</title>
+</head>
+<body>
+    <main>
+        <div>
+            <div data-testid="gameStatus" class="gameStatus"></div>
+            <div class="top">
+                <div class="score" data-testid="score">0</div>
+                <h1 data-testid="gameInstructions" class="gameInstructions">Guess the correct color!</h1>
+                <div data-testid="colorBox" class="colorBox">
+                    
+                </div>
+            </div>
+            <div class="bottom">
+                <div  class="colorOption">
+                    <button data-testid="colorOption"></button>
+                    <button data-testid="colorOption"></button>
+                    <button data-testid="colorOption"></button>
+                    <button data-testid="colorOption"></button>
+                    <button data-testid="colorOption"></button>
+                    <button data-testid="colorOption"></button>
+                </div>
+                <button data-testid="newGameButton"  class="newGameButton">Restart</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

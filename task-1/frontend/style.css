@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+main > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #121010ad;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 3rem;
+    justify-content: flex-start;
+}
+
+.score {
+    /* position: absolute; */
+    /* top: 5%; */
+    /* right: 10%; */
+    align-self: flex-end;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+    color: red;
+    font-family: "Saira", serif;
+    font-weight: 700;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999999px;
+    box-shadow: 0 0 50px rgba(225, 214, 214, 0.5);
+    transition: box-shadow ease-out .8s;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gameStatus {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    font-size: 1rem;
+    padding: .3rem .4rem;
+    width: max-content;
+    border-radius: 15px;
+    /* transition: all ease-in-out .8s; */
+    opacity: 0;
+    display: none;
+}
+
+.gameStatus.right {
+    display: block;
+    color: #79D7BE;
+    border: 3px solid #79D7BE;
+    box-shadow: 0 0 30px #79D7BE;
+}
+
+.gameStatus.wrong {
+    display: block;
+    border: 3px solid #F93827;
+    box-shadow: 0 0 30px #F93827;
+    color: #f93927e1;
+}
+
+@keyframes showStatus {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(-50%, 100%);
+    }
+
+    31% {
+        opacity: 1;
+        transform: translate(-50%, 100%);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(-50%, 90%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -100%);
+    }
+}
+
+.gameStatus {
+    animation: showStatus 1.5s ease-in-out;
+}
+
+.newGameButton {
+    /* position: absolute; */
+    background-color: #16C47F;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: all ease .4s;
+
+    /* bottom: 10%; */
+    /* right: 28%; */
+    /* transform: translateX(-28%); */
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.newGameButton:hover{
+    background-color: #16c47eba;
+}
+
+.gameInstructions {
+    color: white;
+    font-family: "Barriecito", serif;
+
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    word-spacing: .1rem;
+}
+
+.colorBox {
+
+    width: 150px;
+    height: 100px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 10px;
+    transition: box-shadow ease-out .8s;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom .colorOption{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(70px, 1fr));
+    gap: 1.5rem;
+}
+
+.colorOption button {
+    background-color: blue;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: all ease .4s;
+}
+
+.colorOption button:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 740px) {
+    .gameInstructions {
+        font-size: 2.7rem;
+    }
+
+    .score {
+        margin-top: 1rem;
+        margin-right: 1.5rem;
+        font-size: 1.8rem;
+        position: absolute;
+        right: 5%;
+        top: 0%;
+    }
+
+    .gameStatus {
+        font-size: 1.5rem;
+        padding: .3rem 2rem;
+    }
+
+    .top {
+        padding-top: 6rem;
+    }
+}
+
+@media  screen and (min-width: 1054px) {
+    .gameInstructions {
+        word-spacing: .3rem;
+        letter-spacing: .3rem;
+        font-size: 2.5rem;    
+    }
+
+    .colorBox {
+        width: 180px;
+        height: 150px;
+    }
+
+    .score {
+        margin-right: 5rem;
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+        right: 10%;
+        top: 10%;
+    }
+
+    .top {
+        gap: 2rem;
+    }
+
+    .newGameButton {
+        /* bottom: 20%; */
+        /* right: 20%; */
+        padding: 1rem 1.7rem;
+        font-size: medium;
+        /* transform: ; */
+    }
+
+    main > div {
+        justify-content: center;
+        padding-top: 0rem;
+        gap: 2rem;
+    }
+}
