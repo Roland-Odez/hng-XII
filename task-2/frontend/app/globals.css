@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: hsla(190, 79%, 8%, 1);
+  height: 100vh;
+
+  background: hsla(190, 79%, 8%, 1);
+
+  background: linear-gradient(180deg, hsla(190, 79%, 8%, 1) 64%, hsla(189, 80%, 14%, 1) 100%);
+  
+  background: -moz-linear-gradient(180deg, hsla(190, 79%, 8%, 1) 64%, hsla(189, 80%, 14%, 1) 100%);
+  
+  background: -webkit-linear-gradient(180deg, hsla(190, 79%, 8%, 1) 64%, hsla(189, 80%, 14%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#041E23", endColorstr="#07373F", GradientType=1 );
+}
+
+.ticket-head-gradient {
+  background: hsla(190, 79%, 8%, 1);
+
+  background: linear-gradient(135deg, hsla(190, 79%, 8%, 1) 25%, hsla(189, 80%, 14%, 1) 100%);
+  
+  background: -moz-linear-gradient(135deg, hsla(190, 79%, 8%, 1) 25%, hsla(189, 80%, 14%, 1) 100%);
+  
+  background: -webkit-linear-gradient(135deg, hsla(190, 79%, 8%, 1) 25%, hsla(189, 80%, 14%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#041e23", endColorstr="#07373f", GradientType=1 );
+}
+
+.input-with-icon {
+  background: url('/envelope.svg') no-repeat left 10px center;
+  background-size: 20px;
+  padding-left: 35px; /* Adjust to prevent text overlap */
+}
+
+.ticket-bg-image {
+  background: url('/ticket-image.svg') no-repeat;
+  background-size: contain;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
