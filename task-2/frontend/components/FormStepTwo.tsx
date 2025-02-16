@@ -21,11 +21,12 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
     const [showClickArea, setShowClickArea] = useState<boolean>(false)
     const fileInputRef = createRef<HTMLInputElement>()
 
-    const [formDataTwo, setFormDataTwo] = useState<{imageUrl: string, email: string, username: string, request: string}>({
+    const [formDataTwo, setFormDataTwo] = useState<{imageUrl: string, email: string, username: string, request: string, ticketType: string}>({
         imageUrl: '',
         email: '',
         username: '',
-        request: ''
+        request: '',
+        ticketType: ''
       })
       const [errors, setErrors] = useState<Record<string, string>>({})
 
@@ -34,7 +35,7 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
           const local = localStorage.getItem('formData')
           const data = JSON.parse(local || '{}')
           if (data.imageUrl || data.email || data.username || data.request) {
-            setFormDataTwo({imageUrl: data?.imageUrl, email: data?.email, username: data?.username, request: data?.request})
+            setFormDataTwo({imageUrl: data?.imageUrl, email: data?.email, username: data?.username, request: data?.request, ticketType: data?.ticketType})
           }else{
             localStorage.setItem('formData', JSON.stringify({...data, imageUrl: '', email: '', username: '', request: ''}))
           }
@@ -213,7 +214,7 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
 
         <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-8 gap-y-6'>
           <Button className='w-full' onClick={() => setStep(1)} variant="outline" size="lg" style={notoSerif.style}>Back</Button>
-          <Button className='w-full' onClick={handleCheckFormData} size="lg" style={notoSerif.style}>Get My Free Ticket</Button>
+          <Button className='w-full capitalize' onClick={handleCheckFormData} size="lg" style={notoSerif.style}>{`Get My ${formDataTwo.ticketType} Ticket`}</Button>
         </div>
 
     </div>
