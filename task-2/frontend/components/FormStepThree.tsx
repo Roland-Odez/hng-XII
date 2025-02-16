@@ -23,11 +23,13 @@ const FormStepThree = ({step}: {step: number}) => {
     const sectionRef = React.createRef<HTMLDivElement>()
 
     useEffect(() => {
+        if (typeof window !== "undefined") {
         const local = localStorage.getItem('formData')
         const data = JSON.parse(local || '{}')
         if (data) {
             setFormData({...data})
         }
+    }
     }, [])
 
     const handleBookAnotherTicket = () => {

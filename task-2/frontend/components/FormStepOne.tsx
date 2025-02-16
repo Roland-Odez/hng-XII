@@ -24,6 +24,7 @@ const FormStepOne = ({step, setStep}: {step: number, setStep: (step: number) => 
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
     const local = localStorage.getItem('formData')
     const data = JSON.parse(local || '{}')
     if (data) {
@@ -31,6 +32,7 @@ const FormStepOne = ({step, setStep}: {step: number, setStep: (step: number) => 
     }else{
       localStorage.setItem('formData', JSON.stringify({...data, ticketType: '', numberOfTicket: 0}))
     }
+  }
   }, [])
 
 

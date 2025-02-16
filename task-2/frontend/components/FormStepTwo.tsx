@@ -24,6 +24,7 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
       const [errors, setErrors] = useState<Record<string, string>>({})
 
       useEffect(() => {
+        if (typeof window !== "undefined") {
           const local = localStorage.getItem('formData')
           const data = JSON.parse(local || '{}')
           if (data.imageUrl || data.email || data.username || data.request) {
@@ -31,6 +32,7 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
           }else{
             localStorage.setItem('formData', JSON.stringify({...data, imageUrl: '', email: '', username: '', request: ''}))
           }
+        }
         }, [])
 
     const handleUpload = async (file: File) => {
@@ -127,7 +129,9 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
       const local = localStorage.getItem('formData')
       const data = JSON.parse(local || '{}')
       setFormDataTwo({ ...formDataTwo, [name]: value });
+      if (typeof window !== "undefined") {
       localStorage.setItem('formData', JSON.stringify({...data, [name]: value}));
+      }
     };
 
     const handleCheckFormData = () => {

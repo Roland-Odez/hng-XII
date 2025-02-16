@@ -1,6 +1,6 @@
 'use client'
 
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import FormHead from './FormHead'
 import FormStepOne from './FormStepOne'
 import FormStepTwo from './FormStepTwo'
@@ -9,15 +9,18 @@ import FormStepThree from './FormStepThree'
 
 const FormContainer = () => {
 
-  const [step, setStep] = useState<number>(() => {
-    const storedStep = localStorage.getItem('step')
-    return storedStep ? parseInt(storedStep) : 1
-  })
-  
+  const [step, setStep] = useState<number>(1);
 
   useEffect(() => {
-    localStorage.setItem('step', JSON.stringify(step))
-  }, [step])
+    if (typeof window !== "undefined") {
+      const storedStep = localStorage.getItem("step");
+      if (storedStep) {
+        setStep(parseInt(storedStep));
+      } else {
+        localStorage.setItem("step", JSON.stringify(step));
+      }
+    }
+  }, []);
 
   return (
     <div className='max-w-[700px] border border-secondary-2 mx-auto p-0 md:p-12 rounded-3xl flex flex-col gap-y-8 bg-primary-1'>
