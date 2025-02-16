@@ -4,18 +4,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: hsla(190, 79%, 8%, 1);
-  height: 100vh;
-
-  background: hsla(190, 79%, 8%, 1);
-
-  background: linear-gradient(180deg, hsla(190, 79%, 8%, 1) 64%, hsla(189, 80%, 14%, 1) 100%);
-  
-  background: -moz-linear-gradient(180deg, hsla(190, 79%, 8%, 1) 64%, hsla(189, 80%, 14%, 1) 100%);
-  
-  background: -webkit-linear-gradient(180deg, hsla(190, 79%, 8%, 1) 64%, hsla(189, 80%, 14%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#041E23", endColorstr="#07373F", GradientType=1 );
+  height: max-content !important;
+  background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.2) 0%, rgba(36, 160, 181, 0) 100%), #02191D;
 }
 
 .ticket-head-gradient {
@@ -37,7 +27,7 @@ body {
 }
 
 .ticket-bg-image {
-  background: url('/ticket-image.svg') no-repeat;
+  background: url('/ticket-background.svg') no-repeat;
   background-size: contain;
 }
 
@@ -46,3 +36,18 @@ body {
     --radius: 0.5rem;
   }
 }
+/* Multi Step Form */
+
+/* Auto layout */
+/* display: flex;
+flex-direction: column;
+align-items: center;
+padding: 112px 0px;
+gap: 80px;
+
+position: absolute;
+width: 1440px;
+height: 1082px;
+left: calc(50% - 1440px/2);
+top: 34px; */
+

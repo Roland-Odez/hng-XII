@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { Toaster } from "@/components/ui/toaster"
 import "./globals.css";
 
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         className={`${roboto.className} antialiased h-full`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
