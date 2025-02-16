@@ -12,6 +12,12 @@ import { Button } from './ui/button'
 import FormHead from './FormHead'
 import { Road_Rage } from 'next/font/google'
 import { formSchemaOne } from '@/schemas/formSchema'
+import { Noto_Serif } from 'next/font/google'
+
+const notoSerif = Noto_Serif({
+  weight: ['400'],
+  subsets: ['latin'],
+})
 
 const roadRage = Road_Rage({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
 
@@ -141,8 +147,8 @@ const FormStepOne = ({step, setStep}: {step: number, setStep: (step: number) => 
         {errors.numberOfTicket && <p className='text-red-500 text-sm'>{errors.numberOfTicket}</p>}
 
         <div className='flex flex-col-reverse md:flex-row items-center justify-center md:px-12 md:bg-primary-2 md:border border-secondary-2 rounded-3xl gap-8 gap-y-6'>
-          <Button className='w-full' variant="outline" size="lg">Cancel</Button>
-          <Button className='w-full' size="lg" onClick={checkFormData}>Next</Button>
+          <Button className='w-full' variant="outline" size="lg" style={notoSerif.style}>Cancel</Button>
+          <Button className='w-full' size="lg" onClick={checkFormData} style={notoSerif.style}>Next</Button>
         </div>
 
       </div>

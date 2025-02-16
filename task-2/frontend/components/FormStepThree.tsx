@@ -6,6 +6,12 @@ import { Alatsi, Road_Rage } from 'next/font/google'
 import Image from 'next/image'
 import { Button } from './ui/button'
 import html2canvas from "html2canvas";
+import { Noto_Serif } from 'next/font/google'
+
+const notoSerif = Noto_Serif({
+  weight: ['400'],
+  subsets: ['latin'],
+})
 
 const alatsi = Alatsi({subsets: ['latin'], weight: ['400']})
 const roadRage = Road_Rage({ subsets: ['latin'], weight: ['400'], style: ['normal'] })
@@ -108,8 +114,8 @@ const FormStepThree = ({step}: {step: number}) => {
         </div>
 
         <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-8 gap-y-6'>
-          <Button className='w-full' onClick={handleBookAnotherTicket} variant="outline" size="lg">Book Another Ticket</Button>
-          <Button className='w-full' size="lg" onClick={captureScreenshot}>Download Ticket</Button>
+          <Button className='w-full' onClick={handleBookAnotherTicket} variant="outline" size="lg" style={notoSerif.style}>Book Another Ticket</Button>
+          <Button className='w-full' size="lg" onClick={captureScreenshot} style={notoSerif.style}>Download Ticket</Button>
         </div>
     </div>
   )

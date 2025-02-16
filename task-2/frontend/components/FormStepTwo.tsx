@@ -9,6 +9,12 @@ import { Button } from './ui/button'
 import { toast } from '@/hooks/use-toast'
 import FormHead from './FormHead'
 import { formSchemaTwo } from '@/schemas/formSchema'
+import { Noto_Serif } from 'next/font/google'
+
+const notoSerif = Noto_Serif({
+  weight: ['400'],
+  subsets: ['latin'],
+})
 
 const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => void}) => {
     const [dragging, setDragging] = useState<boolean>(false)
@@ -206,8 +212,8 @@ const FormStepTwo = ({step, setStep}: {step: number, setStep: (step: number) => 
         </div>
 
         <div className='flex flex-col-reverse md:flex-row items-center justify-center gap-8 gap-y-6'>
-          <Button className='w-full' onClick={() => setStep(1)} variant="outline" size="lg">Back</Button>
-          <Button className='w-full' onClick={handleCheckFormData} size="lg">Get My Free Ticket</Button>
+          <Button className='w-full' onClick={() => setStep(1)} variant="outline" size="lg" style={notoSerif.style}>Back</Button>
+          <Button className='w-full' onClick={handleCheckFormData} size="lg" style={notoSerif.style}>Get My Free Ticket</Button>
         </div>
 
     </div>
